@@ -4,9 +4,9 @@ Py-validation is an easy to use python validation library. It implements the lar
 
 ### About
 
-Comming from a the php community, I have a great experience in web app developement and many environements and platforms (Android, .NET Desktop ). I love to use solutions from other framework or platform to make my life easier. I really love approching other plateform as it has tougth me a lot on how should I approach a design or implementation problem. I usually find my self implementing javascript patern in php because it makes more sense and straiforward.
+Comming from the php community, I have a great experience in web app developement and many environments and platforms (Android, .NET Desktop, Javascript ). I love to use solutions from other framework or platforms to make my life easier. I really love approaching other plateforms as it has tougth me a lot on how should I approach a design or implementation problem. I usually find myself implementing javascript paterns in php because it makes more sense and straiforward.
 
-I found my self in python projects lately, as I dug to find tools for validation, I found Cerberus which is really great. however I found that laravel validation is more convenient and less combersome for an experienced php developer like me. Thus I decided to roll my python validation library using the laravel concepts.
+I found myself in python projects lately, as I dug to find tools for validation, I found Cerberus which is really great. however I found that laravel validation is more convenient and less combersome for an experienced php developer like me. Thus I decided to roll my python validation library using the concepts from [laravel](https://laravel.com/docs/5.2/validation).
 
 ### Installation
 
@@ -41,7 +41,7 @@ age ['The age should be more than or equal to 20']
 
 ### Validations 
 
-Currently we have only fives basic validations :
+Currently we have only five basic validations :
 * bail :this special validator make the engine stop and return as soon as a invalid data is encountered 
 * required : the input should not be empty, None
 * num :the  input should be a digit
@@ -61,7 +61,7 @@ def evance(attr, val, vdt, *args):
 Validator.extend('evance', evance)
 ```
 Validation extend takes the name of the validator and a callable function as arguments. The function will be passed the following arguments when the engine calls the validator function :
-* attr : (attribute) the input field under validation  should not be empty, None
+* attr : (attribute) the input field under validation
 * val : (value) the value of the input field during data submission
 * vdt : (validator) the validator insatance you can use to add errors to the error bag
 * *args : arguments your validator expect "max:5" for instance will have arg[0] as 5 
