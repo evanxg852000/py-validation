@@ -42,11 +42,12 @@ age ['The age should be more than or equal to 20']
 ### Validations 
 
 Currently we have only five basic validations :
-* bail :this special validator make the engine stop and return as soon as a invalid data is encountered 
-* required : the input should not be empty, None
-* num :the  input should be a digit
-* min :the input should be a digit and more than the min param [min:3]
-* max :the input should be a digit and less than the max param [max:5] 
+* bail :this special validator will make the engine skip the remaining rules on the current field being validated as soon as a the data fails one. this is useful if you just want to know that the data is valid  
+* req : the input should not be empty, None -it is required
+* num :the  input should be a numeric (float or integer)
+* min :the input should be a digit greater than the min param [min:3] or a string longer than the min param [min:3]
+* max :the input should be a digit less than the max param [max:5] or a string shorter than the min param [min:3]
+* btw : the input should be a digit between the btw param [btw:3,5] or a string of length between the btw param [btw:3,5]
 
 ### Adding your own validation
 You can extend the engine to add your own validators. the example below shows an example of this...
